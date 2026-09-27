@@ -11,7 +11,7 @@ export default function DashboardPage() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
 
   // Real AI API call handle korar function
-  const handleGenerate = async (e: React.FormEvent) => {
+    const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputText.trim()) return;
 
@@ -28,12 +28,12 @@ export default function DashboardPage() {
       const data = await res.json();
 
       if (data.success) {
+        // If everything is successful, set the generated content to state
         setGeneratedContent(data.data);
       } else {
-        alert('Failed to generate content. Please try again.');
+        alert('Something went wrong.');
       }
     } catch (err) {
-      console.error(err);
       alert('Something went wrong.');
     } finally {
       setLoading(false);
