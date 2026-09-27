@@ -130,7 +130,7 @@ export default function DashboardPage() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '8px' }}>
                     <h4 style={{ fontSize: '14px', color: '#38bdf8', margin: 0 }}>📘 Facebook Caption</h4>
                     <button 
-                      onClick(() => handleCopy(generatedContent.facebook, 'facebook')}
+                      onClick{() => handleCopy(generatedContent.facebook, 'facebook')}
                       style={{ padding: '4px 10px', background: '#1f2937', color: '#fff', border: 'none', borderRadius: '4px', cursor: 'pointer', fontSize: '12px' }}
                     >
                       {copiedField === 'facebook' ? 'Copied! ✅' : 'Copy'}
