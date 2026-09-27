@@ -9,7 +9,7 @@ export default function DashboardPage() {
   const [loading, setLoading] = useState(false);
   const [generatedContent, setGeneratedContent] = useState<any>(null);
   const [copiedField, setCopiedField] = useState<string | null>(null);
-
+// Cache bypass update
   // Real AI API call handle korar function
     const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault();
