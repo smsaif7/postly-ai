@@ -56,12 +56,12 @@ export default function DashboardPage() {
             <h1 style={{ fontSize: '22px', fontWeight: 'bold', margin: 0 }}>Postly.ai Dashboard</h1>
             <p style={{ color: '#9ca3af', fontSize: '14px', margin: '5px 0 0' }}>Welcome back, {session?.user?.name || session?.user?.email || 'User'}!</p>
           </div>
-          <button 
-            onClick={() => signOut({ callbackUrl: '/login' })}
-            style={{ padding: '8px 16px', backgroundColor: '#ef4444', color: '#fff', border: 'none', borderRadius: '6px', cursor: 'pointer', fontSize: '14px', fontWeight: '600' }}
-          >
-            Logout
-          </button>
+          <button
+  onClick={() => handleCopy(generatedContent.facebook, 'facebook')}
+  style={{ padding: '4px 10px', background: '#1f2937', color: '#fff' }}
+>
+  {copiedField === 'facebook' ? 'Copied! ✅' : 'Copy'}
+</button>
         </div>
 
         {/* Repurpose Card */}
