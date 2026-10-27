@@ -37,5 +37,6 @@ export async function POST(req: Request) {
   } catch (error: any) {
     console.error('AI Generation Error:', error);
     return NextResponse.json({ error: 'Failed to generate AI content' }, { status: 500 });
+    
   }
 }
